@@ -7,11 +7,8 @@ EAPI=4
 inherit eutils
 
 DESCRIPTION="My C implementation of John Gruber's Markdown markup language."
-GITHUB_USER="Orc"
-GITHUB_TAG="v${PV}"
-
-HOMEPAGE="https://github.com/${GITHUB_USER}/${PN}"
-SRC_URI="https://github.com/${GITHUB_USER}/${PN}/tarball/${GITHUB_TAG} -> ${P}.tar.gz"
+HOMEPAGE="http://www.pell.portland.or.us/~orc/Code/discount/"
+SRC_URI="http://www.pell.portland.or.us/~orc/Code/discount/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
