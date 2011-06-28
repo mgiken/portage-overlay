@@ -16,8 +16,9 @@ LICENSE="Artistic-2"
 SLOT="0"
 KEYWORDS="~amd64"
 
-DEPEND=""
-RDEPEND=">=dev-scheme/racket-5.1.1"
+RDEPEND=">=dev-scheme/racket-5.1.1
+		>=app-misc/rlwrap-0.30"
+DEPEND="${RDEPEND}"
 
 src_unpack() {
 	unpack ${A}
