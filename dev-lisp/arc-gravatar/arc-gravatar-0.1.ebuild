@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~amd64"
 
 RDEPEND=">=dev-lisp/arc-mg-3.1.1
-		>=dev-libs/openssl-1.0.0d"
+		>=dev-lisp/arc-crypto-0.2"
 
 src_unpack() {
 	unpack ${A}
