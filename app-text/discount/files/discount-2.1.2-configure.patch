@@ -1,0 +1,12 @@
+*** configure.inc	Thu Nov 17 14:10:43 2011
+--- configure.inc.new	Thu Nov 17 14:12:01 2011
+***************
+*** 1265,1271 ****
+  install)$PROG_INSTALL -c \$FULLNAME "\$1"
+  	$PROG_LN_S -f \$FULLNAME \$1/\$LIBNAME.\$MAJOR
+  	$PROG_LN_S -f \$FULLNAME \$1/\$LIBNAME
+- 	test "$LDCONFIG" && $LDCONFIG "\$1"
+  	;;
+  esac
+  EOF
+--- 1265,1270 ----

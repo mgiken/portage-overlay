@@ -14,6 +14,10 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64"
 
+src_prepare() {
+	epatch ${FILESDIR}/${P}-configure.patch
+}
+
 src_configure() {
 	./configure.sh \
 		--prefix=/usr \
