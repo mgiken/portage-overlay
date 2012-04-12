@@ -10,7 +10,7 @@ HOMEPAGE="https://github.com/mgiken/arc-crypto"
 
 GITHUB_USER="mgiken"
 GITHUB_TAG="v${PV}"
-SHA1="e7aeea2"
+SHA1="37a4597"
 
 SRC_URI="https://github.com/${GITHUB_USER}/${PN}/tarball/${GITHUB_TAG} -> ${P}.tar.gz"
 
