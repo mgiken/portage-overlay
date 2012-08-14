@@ -10,7 +10,7 @@ HOMEPAGE="http://www.arangodb.org/"
 
 GITHUB_USER="triAGENS"
 GITHUB_TAG="v$(echo ${PV} | sed -e 's/_beta2/\.beta2/')"
-SHA1="0db604f"
+SHA1="c7a3081"
 
 SRC_URI="https://github.com/${GITHUB_USER}/${PN}/tarball/${GITHUB_TAG} -> ${P}.tar.gz"
 
@@ -23,7 +23,6 @@ DEPEND=">=dev-libs/libev-4.04
 		>=sys-libs/readline-6.2_p1
 		>=sys-libs/ncurses-5.9-r2
 		>=dev-libs/boost-1.48.0-r2"
-
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${GITHUB_USER}-${PN}-${SHA1}"
