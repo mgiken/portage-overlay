@@ -4,6 +4,8 @@
 
 EAPI=4
 
+inherit eutils
+
 DESCRIPTION="Terminal multiplexer"
 HOMEPAGE="http://tmux.sourceforge.net"
 SRC_URI="mirror://sourceforge/tmux/${P}.tar.gz"
@@ -42,6 +44,7 @@ pkg_setup() {
 src_prepare() {
 	epatch "${FILESDIR}/tmux-ambiguous-width-cjk.patch"
 	epatch "${FILESDIR}/tmux-do-not-combine-utf8.patch"
+	epatch "${FILESDIR}/tmux_use_vt100_line_drawing_characters.patch"
 	epatch "${FILESDIR}/tmux-pane-border-ascii.patch"
 	# look for config file in the prefix
 	sed -i -e '/SYSTEM_CFG/s:"/etc:"'"${EPREFIX}"'/etc:' tmux.h || die
