@@ -1,4 +1,4 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -12,10 +12,10 @@ SRC_URI="http://www.pell.portland.or.us/~orc/Code/discount/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="amd64"
 
 src_prepare() {
-	epatch ${FILESDIR}/${P}-configure.patch
+	epatch ${FILESDIR}/discount-2.1.2-configure.patch
 }
 
 src_configure() {
