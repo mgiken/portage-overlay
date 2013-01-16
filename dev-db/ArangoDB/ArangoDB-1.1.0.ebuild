@@ -3,14 +3,13 @@
 
 EAPI="4"
 
-inherit eutils
+inherit eutils vcs-snapshot
 
 DESCRIPTION="The universal nosql database"
 HOMEPAGE="http://www.arangodb.org/"
 
 GITHUB_USER="triAGENS"
 GITHUB_TAG="v${PV}"
-SHA1="4e20c54"
 
 SRC_URI="https://github.com/${GITHUB_USER}/${PN}/tarball/${GITHUB_TAG} -> ${P}.tar.gz"
 
