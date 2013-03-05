@@ -9,7 +9,7 @@ DESCRIPTION="The universal nosql database"
 HOMEPAGE="http://www.arangodb.org/"
 
 GITHUB_USER="triAGENS"
-GITHUB_TAG="v1.2.beta1"
+GITHUB_TAG="v${PV}"
 
 SRC_URI="https://github.com/${GITHUB_USER}/${PN}/archive/${GITHUB_TAG}.tar.gz -> ${P}.tar.gz"
 
