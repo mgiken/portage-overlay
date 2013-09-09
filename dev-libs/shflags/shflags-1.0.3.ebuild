@@ -1,7 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Header: $
 
-EAPI="3"
 
 DESCRIPTION="Simplified handling of command-line flags in Bourne based shells"
 HOMEPAGE="http://code.google.com/p/${PN}/"
