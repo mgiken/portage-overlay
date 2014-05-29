@@ -6,7 +6,7 @@ EAPI=5
 
 inherit eutils user vcs-snapshot
 
-DESCRIPTION="ArangoDB is a multi-purpose, open-source database with flexible data models for documents, graphs, and key-values"
+DESCRIPTION="the multi-purpose NoSQL DB"
 HOMEPAGE="http://www.arangodb.org/"
 
 GITHUB_USER="triAGENS"

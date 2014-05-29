@@ -1,11 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Header: $
 
-EAPI="4"
+EAPI=5
 
-inherit eutils vcs-snapshot
+inherit eutils user vcs-snapshot
 
-DESCRIPTION="The universal nosql database"
+DESCRIPTION="the multi-purpose NoSQL DB"
 HOMEPAGE="http://www.arangodb.org/"
 
 GITHUB_USER="triAGENS"
@@ -16,13 +17,12 @@ SRC_URI="https://github.com/${GITHUB_USER}/${PN}/archive/${GITHUB_TAG}.tar.gz ->
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="amd64"
+IUSE=""
 
-DEPEND=">=dev-libs/libev-4.04
-		>=dev-lang/v8-3.12.19.15
-		>=sys-libs/readline-6.2_p1
-		>=dev-libs/openssl-1.0.0j
-		>=dev-libs/icu-49.1.2"
+DEPEND=">=sys-libs/readline-6.2_p1
+		>=dev-libs/openssl-1.0.1g"
 RDEPEND="${DEPEND}"
+
 
 pkg_setup() {
 	ebegin "Creating arangodb user and group"
@@ -32,7 +32,7 @@ pkg_setup() {
 }
 
 src_configure() {
-	econf --localstatedir="${EPREFIX}"/var --disable-all-in-one-v8 --disable-all-in-one-libev --disable-all-in-one-icu || die "configure failed"
+	econf --localstatedir="${EPREFIX}"/var --enable-all-in-one-v8 --enable-all-in-one-libev --enable-all-in-one-icu || die "configure failed"
 }
 
 src_install() {
@@ -40,6 +40,5 @@ src_install() {
 
 	newinitd "${FILESDIR}"/arangodb.initd arangodb
 
-	fowners arangodb:arangodb /var/log/arangodb
-	fowners arangodb:root     /var/lib/arangodb
+	fowners arangodb:arangodb /var/lib/arangodb /var/lib/arangodb-apps /var/log/arangodb
 }
